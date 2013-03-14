@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ObjectCreate( ${1:str name}, ${2:int type=OBJ_VLINE|OBJ_HLINE|OBJ_TREND|OBJ_TRENDBYANGLE|OBJ_REGRESSION|OBJ_CHANNEL|OBJ_STDDEVCHANNEL|OBJ_GANNLINE|OBJ_GANNFAN|OBJ_GANNGRID|OBJ_FIBO|OBJ_FIBOTIMES|OBJ_FIBOFAN|OBJ_FIBOARC|OBJ_EXPANSION|OBJ_FIBOCHANNEL|OBJ_RECTANGLE|OBJ_TRIANGLE|OBJ_ELLIPSE|OBJ_PITCHFORK|OBJ_CYCLES|OBJ_TEXT|OBJ_ARROW|OBJ_LABEL}, ${3:int window}, ${4:dtt time1}, ${5:dbl price1}, ${6:dtt time2=0}, ${7:dbl price2=0}, ${8:dtt time3=0}, ${9:dbl price3=0} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>objectcreate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>bool</description>
+</snippet>

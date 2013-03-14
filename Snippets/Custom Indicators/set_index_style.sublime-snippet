@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+SetIndexStyle( ${1:int index}, ${2:int type=DRAW_LINE|DRAW_SECTION|DRAW_HISTOGRAM|DRAW_ARROW|DRAW_ZIGZAG|DRAW_NONE}, ${3:int style=EMPTY*|STYLE_SOLID|STYLE_DASH|STYLE_DOT|STYLE_DASHDOT|STYLE_DASHDOTDOT}, ${4:int width=EMPTY*|1|2|3|4|5}, ${5:clr clr=CLR_NONE} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>setindexstyle</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>void</description>
+</snippet>

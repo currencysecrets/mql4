@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ERR_INVALID_TRADE_VOLUME${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>errinvalidtradevolume</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>131</description>
+</snippet>

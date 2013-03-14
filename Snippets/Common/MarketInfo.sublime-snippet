@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+MarketInfo( ${1:str symbol}, ${2:int type=MODE_LOW|MODE_HIGH|MODE_TIME|MODE_BID|MODE_ASK|MODE_POINT|MODE_DIGITS|MODE_SPREAD|MODE_STOPLEVEL|MODE_LOTSIZE|MODE_TICKVALUE|MODE_TICKSIZE|MODE_SWAPLONG|MODE_SWAPSHORT|MODE_STARTING|MODE_EXPIRATION|MODE_TRADEALLOWED|MODE_MINLOT|MODE_LOTSTEP|MODE_MAXLOT|MODE_SWAPTYPE|MODE_PROFITCALCMODE|MODE_MARGINCALCMODE|MODE_MARGININIT|MODE_MARGINMAINTENANCE|MODE_MARGINHEDGED|MODE_MARGINREQUIRED|MODE_FREEZELEVEL} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MarketInfo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>double</description>
+</snippet>

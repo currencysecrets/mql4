@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+MODE_SENKOUSPANA${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MODE_SENKOUSPANA</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>3</description>
+</snippet>

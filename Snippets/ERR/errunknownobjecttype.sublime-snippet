@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ERR_UNKNOWN_OBJECT_TYPE${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>errunknownobjecttype</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>4203</description>
+</snippet>

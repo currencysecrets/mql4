@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ERR_SOME_ARRAY_ERROR${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>errsomearrayerror</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>4053</description>
+</snippet>

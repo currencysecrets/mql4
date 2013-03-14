@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+OBJ_PITCHFORK${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>OBJ_PITCHFORK</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>19</description>
+</snippet>

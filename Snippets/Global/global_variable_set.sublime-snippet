@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+GlobalVariableSet( ${1:str name}, ${2:dbl value} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>globalvariableset</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>datetime</description>
+</snippet>

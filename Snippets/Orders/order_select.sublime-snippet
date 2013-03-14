@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+OrderSelect( ${1:int index}, ${2:int select=SELECT_BY_POS|SELECT_BY_TICKET}, ${3:int pool=MODE_TRADES*|MODE_HISTORY})${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>orderselect</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>bool</description>
+</snippet>

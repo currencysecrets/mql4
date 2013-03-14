@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+OrderSend( ${1:str symbol}, ${2:int cmd=OP_BUY|OP_SELL|OP_BUYSTOP|OP_SELLSTOP|OP_BUYLIMIT|OP_SELLLIMIT}, ${3:dbl volume}, ${4:dbl price}, ${5:int slippage}, ${6:dbl stoploss}, ${7:dbl takeprofit}, ${8:str comment=NULL}, ${9:int magic=0}, ${10:dtt expiration=0}, ${11:clr arrow_color=CLR_NONE} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>OrderSend</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>int</description>
+</snippet>

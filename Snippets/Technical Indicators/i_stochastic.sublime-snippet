@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+iStochastic( ${1:str symbol}, ${2:int timeframe=PERIOD_M1|PERIOD_M5|PERIOD_M15|PERIOD_M30|PERIOD_H1|PERIOD_H4|PERIOD_D1|PERIOD_W1|PERIOD_MN1|0}, ${3:int %Kperiod}, ${4:int %Dperiod}, ${5:int slowing}, ${6:int method=MODE_SMA|MODE_EMA|MODE_SMMA|MODE_LWMA}, ${7:int price_field=0|1}, ${8:int mode=MODE_MAIN|MODE_SIGNAL}, ${9:int shift} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>istochastic</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>double</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ERR_FUNC_NOT_ALLOWED_IN_TESTING${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>errfuncnotallowedintesting</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>4059</description>
+</snippet>

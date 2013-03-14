@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+iHighest( ${1:str symbol}, ${2:int timeframe=PERIOD_M1|PERIOD_M5|PERIOD_M15|PERIOD_M30|PERIOD_H1|PERIOD_H4|PERIOD_D1|PERIOD_W1|PERIOD_MN1|0}, ${3:int type=MODE_OPEN|MODE_LOW|MODE_HIGH|MODE_CLOSE|MODE_VOLUME|MODE_TIME}, ${4:int count=WHOLE_ARRAY}, ${5:int start=0} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ihighest</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>int</description>
+</snippet>

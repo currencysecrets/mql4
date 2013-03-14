@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+ERR_SYSTEM_BUSY${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ERR_SYSTEM_BUSY</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>4022</description>
+</snippet>

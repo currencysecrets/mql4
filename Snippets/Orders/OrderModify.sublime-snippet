@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+OrderModify( ${1:int ticket}, ${2:dbl price}, ${3:dbl stoploss}, ${4:dbl takeprofit}, ${5:dtt expiration}, ${6:clr color=CLR_NONE} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>OrderModify</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>bool</description>
+</snippet>
