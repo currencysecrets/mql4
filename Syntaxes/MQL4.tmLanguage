@@ -169,10 +169,33 @@
 			<string>storage.type.mq4</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>\b(extern|static)\b</string>
-			<key>name</key>
-			<string>storage.modifier.mq4</string>
+			<key>begin</key>
+			<string>\b(extern|static)\b\s+</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier.mq4</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(=|;|\n)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(int|void|bool|double|datetime|char|string|color)\s+</string>
+					<key>name</key>
+					<string>storage.type.mq4</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(\w*)</string>
+					<key>name</key>
+					<string>variable.other.mq4</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -212,7 +235,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>#(import|define)</string>
+			<string>#(import|define|property)\s+</string>
 			<key>name</key>
 			<string>constant.language.mq4</string>
 		</dict>

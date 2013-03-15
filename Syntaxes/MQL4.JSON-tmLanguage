@@ -32,82 +32,92 @@
 			"name" : "constant.language.mq4",
 			"match" : "\\b(([A-Z_]+)(\\d*)?)\\b"
 		},
-		{	
+		{
 			"name" : "string.quoted.single.mq4",
 			"begin" : "'",
 			"end" : "'",
 			"beginCaptures" : { "0" : { "name" : "punctuation.definition.string.begin.mq4" } },
 			"endCaptures" : { "0" : { "name" : "punctuation.definition.string.end.mq4" } }
 		},
-		{	
+		{
 			"name" : "comment.block.documentation.mq4",
 			"begin" : "/\\*\\*",
 			"end" : "\\*/",
 			"captures" : { "0" : { "name" : "punctuation.definition.comment.mq4" } }
-		},	
+		},
 		{	"name" : "comment.block.mq4",
 			"begin" : "/\\*",
 			"end" : "\\*/",
 			"captures" : { "0" : { "name" : "punctuation.definition.comment.mq4" } }
 		},
-		{	
+		{
 			"name" : "comment.line.double-slash.mq4",
 			"match" : "(\/\/).*(\\n)?",
 			"captures" : { "1" : { "name" : "punctuation.definition.comment.mq4" } }
 		},
-		{	
+		{
 			"name" : "storage.type.mq4",
 			"match" : "\\b(int|void|bool|double|datetime|char|string|color)\\b"
 		},
-		{	
-			"name" : "storage.modifier.mq4",
-			"match" : "\\b(extern|static)\\b"
+		{
+			"begin" : "\\b(extern|static)\\s+",
+			"beginCaptures" : {
+				"1" : { "name" : "storage.modifier.mq4" }
+			},
+			"patterns" : [{
+					"match" : "\\b(int|void|bool|double|datetime|char|string|color)\\s+",
+					"name" : "storage.type.mq4"
+				},{
+					"match" : "(\\w*)",
+					"name" : "variable.other.mq4"
+				}],
+			"end" : "(=|;|\\n)"
 		},
-		{	
+		{
 			"name" : "keyword.control.mq4",
 			"match" : "\\b(break|case|continue|default|else|for|if|return|switch|while)\\b"
 		},
-		{	
+		{
 			"name" : "constant.language.boolean.true.mq4",
 			"match" : "\\b(true|TRUE)\\b"
 		},
-		{	
+		{
 			"name" : "constant.language.boolean.false.mq4",
 			"match" : "\\b(false|FALSE)\\b"
 		},
-		{	
+		{
 			"name" : "constant.language.null.mq4",
 			"match" : "\\b(null|NULL)\\b"
 		},
-		{	
+		{
 			"name" : "constant.language.empty.mq4",
 			"match" : "\\b(empty|EMPTY)\\b"
 		},
-		{	
+		{
 			"name" : "keyword.operator.mq4",
 			"match" : "!|%|\\*|\\-|\\+|\\/|==|=|!=|<=|>=|<|>|&&|\\|\\||\\*=|\\+=|\\-=|\\+\\+|\\-\\-|\\/=|%=|>>=|<<=|&=|\\|=|\\^=|>>|<<|\\^|\\|~"
 		},
-		{	
+		{
 			"name" : "constant.language.mq4",
-			"match" : "#(import|define)"
+			"match" : "#(import|define|property)\\s+"
 		},
-		{	
+		{
 			"name" : "punctuation.terminator.statement.mq4",
 			"match" : ";"
 		},
-		{	
+		{
 			"name" : "meta.delimiter.method.period.mq4",
 			"match" : "\\."
 		},
-		{	
+		{
 			"name" : "meta.brace.curly.mq4",
 			"match" : "\\{|\\}"
 		},
-		{	
+		{
 			"name" : "meta.brace.round.mq4",
 			"match" : "\\(|\\)"
 		},
-		{	
+		{
 			"name" : "meta.brace.square.mq4",
 			"match" : "\\[|\\]"
 		}
