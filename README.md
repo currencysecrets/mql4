@@ -21,7 +21,7 @@ Installation
 
 To install the package either:
 
-+ Download the zip file either in github or on the website: http://www.currencysecrets.com/575/a-better-way-to-code-mql4 
++ Download the zip file either in github or on the website: http://www.currencysecrets.com/mql4-language-package
 + Unzip the file on your computer
 + Move the "MQL4" folder into Sublime Text's "Packages" folder
 + Restart Sublime Text
