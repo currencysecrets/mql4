@@ -39,7 +39,9 @@ MQL$ functions will have their necessary parameters with types, the following ab
 
 + int = integer
 + dbl = double
++ dtt = datetime
 + str = string
++ char = character
 + bool = boolean
 + clr = color
 + obj = object
@@ -51,5 +53,62 @@ MetaTraderFunction( int test=OP_BUY*|OP_SELL )
 
 Don't forget to tab through parameters!
 
+Templates
+---------
+
+Besides functions, parameters, data types and reserved words which are populated in the code hinting box we also have basic templates added.
+
+By entering in `expertstart` the user can get a blank template for writing their expert advisor, as shown here:
+
+```
+//+------------------------------------------------------------------+
+//| Test.mq4
+//| Copyright 2013, MetaQuotes Software Corp.
+//| http://www.metaquotes.net
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2013, MetaQuotes Software Corp."
+#property link      "http://www.metaquotes.net"
+
+//--- input parameters
+extern int       ExtParam1=0;
+extern int       ExtParam2=0;
+//+------------------------------------------------------------------+
+//| expert initialization function                                   |
+//+------------------------------------------------------------------+
+int init()
+  {
+//----
+
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+int deinit()
+  {
+//----
+
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| expert start function                                            |
+//+------------------------------------------------------------------+
+int start()
+  {
+//----
+
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+```
+
+Users can also add core individual templates by entering `init`, `deinit` or `start` in the text editor.
+
+
+Feature Requests
+----------------
 
 If you any feature requests or amendments to be made to the code please let me know!!
