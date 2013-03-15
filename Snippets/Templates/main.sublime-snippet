@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+//+------------------------------------------------------------------+
+//| ${1:Name_of_file}.mq4
+//| Copyright 2013, ${2:Name of organisation} 
+//| ${3:website URL}
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2013, ${2}"
+#property link      "${3}"
+
+//--- input parameters
+extern int       ${4:ExtParam1=0};
+extern int       ${5:ExtParam2=0};
+
+//+------------------------------------------------------------------+
+//| expert initialization function                                   |
+//+------------------------------------------------------------------+
+int init()
+  {
+//----
+   ${6}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+int deinit()
+  {
+//----
+   ${7}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| expert start function                                            |
+//+------------------------------------------------------------------+
+int start()
+  {
+//----
+   ${0}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>!main</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>init(),deinit(),start()</description>
+</snippet>
