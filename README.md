@@ -30,33 +30,36 @@ You may also want to download WBond's Package Control found here: http://wbond.n
 
 And install packages such as: BracketHighlighter (Cmd + Shift + p then enter "install package" then "brackethighlighter" hit return to install).
 
-Using
+Usage
 =====
 
-To use the MQL4 language simply begin typing your code. 
+To use the MQL4 language simply begin typing your code. You will begin to see a code hinting box that will link to MetaTrader data types, functions, constants and reserved words. Simply enter or tab the selected term you wish to use and Sublime Text will populate any necessary parameters into your working file.
 
-MQL$ functions will have their necessary parameters with types, the following abbreviations being the definitions of the types needed:
 
-+ int = integer
-+ dbl = double
-+ dtt = datetime
-+ str = string
-+ char = character
+Parameter Data Types
+--------------------
+
+Some MQL4 functions have parameters and for brevity sake the following abbreviations have been used in replacement of the standard data types recognised by MetaTrader. Please be aware that these shorter terms are only to be used as an indication of what type of value needs to be placed for the selected parameter:
+
 + bool = boolean
++ char = character
 + clr = color
++ dtt = datetime
++ dbl = double
 + obj = object
++ int = integer
++ str = string
 + ... = anything
 
-Whenever a function has a default value with several parameter choices (separated by pipes "|") it is designated with an asterisk, eg
+Some function parameter values have options and this has been distinguished with the available values possible with each value separated by a pipe symol "|". If a parameter value has a default value this is distinguished as a parameter option with an asterisk "*" (eg. ExampleFunction( bool check=TRUE*|FALSE)) or as a lone paramater value (eg. AnotherExampleFunction( str me="Alone" )).
 
-MetaTraderFunction( int test=OP_BUY*|OP_SELL )
+The easiest way to cycle through parameter values is to use the TAB key on your keyboard.
 
-Don't forget to tab through parameters!
 
-Templates
----------
+Templates (as of v1.1.0)
+------------------
 
-Besides functions, parameters, data types and reserved words which are populated in the code hinting box we also have basic templates added.
+Besides functions, parameters, data types and reserved keywords which are populated in the code hinting box we also have basic templates added.
 
 By entering in `expertstart` the user can get a blank template for writing their expert advisor, as shown here:
 
