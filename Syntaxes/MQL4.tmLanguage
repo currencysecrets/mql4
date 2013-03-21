@@ -17,7 +17,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>\b(int|void|bool|double|datetime|char|string|color)\s+(\w*)</string>
+			<string>\b(int|void|bool|double|datetime|char|string|color)\s+(\w*)(\s*)?\(</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -32,7 +32,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(\n)?(\s*)?{</string>
+			<string>(\n*)?(\s*)?{</string>
 			<key>name</key>
 			<string>meta.function.mq4</string>
 			<key>patterns</key>
@@ -114,7 +114,7 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single.mq4</string>
+			<string>string.quoted.double.mq4</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -163,14 +163,27 @@
 			<string>comment.line.double-slash.mq4</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>\b(int|void|bool|double|datetime|char|string|color)\b</string>
-			<key>name</key>
-			<string>storage.type.mq4</string>
+			<key>begin</key>
+			<string>\b(int|void|bool|double|datetime|char|string|color)\s+(\w*)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.mq4</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.mq4</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(=|;)</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(extern|static)\b\s+</string>
+			<string>\b(extern|static)\s+</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -198,10 +211,18 @@
 			</array>
 		</dict>
 		<dict>
-			<key>match</key>
+			<key>begin</key>
 			<string>\b(break|case|continue|default|else|for|if|return|switch|while)\b</string>
-			<key>name</key>
-			<string>keyword.control.mq4</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.mq4</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\(|;|:|\{|\n)</string>
 		</dict>
 		<dict>
 			<key>match</key>

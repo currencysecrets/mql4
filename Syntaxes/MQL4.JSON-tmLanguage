@@ -1,4 +1,4 @@
-{	
+{
 	"name" : "MetaQuotes (MQL4)",
 	"scopeName" : "source.mq4",
 	"fileTypes" : ["mql4", "mq4" ],
@@ -7,7 +7,7 @@
 	"uuid": "192620ec-60be-4dc4-99a8-5c59c6000ced",
 	"patterns" : [
 		{
-			"begin" : "\\b(int|void|bool|double|datetime|char|string|color)\\s+(\\w*)",
+			"begin" : "\\b(int|void|bool|double|datetime|char|string|color)\\s+(\\w*)(\\s*)?\\(",
 			"beginCaptures" : {
 				"1" : { "name" : "storage.type.function.mq4" },
 				"2" : { "name" : "entity.name.function.mq4" }
@@ -25,7 +25,7 @@
 				"end" : "\\)",
 				"name" : "meta.function.parameter.list.mq4"
 			}],
-			"end" : "(\\n)?(\\s*)?{",
+			"end" : "(\\n*)?(\\s*)?{",
 			"name" : "meta.function.mq4"
 		},
 		{
@@ -36,6 +36,13 @@
 			"name" : "string.quoted.single.mq4",
 			"begin" : "'",
 			"end" : "'",
+			"beginCaptures" : { "0" : { "name" : "punctuation.definition.string.begin.mq4" } },
+			"endCaptures" : { "0" : { "name" : "punctuation.definition.string.end.mq4" } }
+		},
+		{
+			"name" : "string.quoted.double.mq4",
+			"begin" : "\"",
+			"end" : "\"",
 			"beginCaptures" : { "0" : { "name" : "punctuation.definition.string.begin.mq4" } },
 			"endCaptures" : { "0" : { "name" : "punctuation.definition.string.end.mq4" } }
 		},
@@ -56,8 +63,12 @@
 			"captures" : { "1" : { "name" : "punctuation.definition.comment.mq4" } }
 		},
 		{
-			"name" : "storage.type.mq4",
-			"match" : "\\b(int|void|bool|double|datetime|char|string|color)\\b"
+			"begin" : "\\b(int|void|bool|double|datetime|char|string|color)\\s+(\\w*)",
+			"beginCaptures" : {
+				"1" : { "name" : "storage.type.mq4" },
+				"2" : { "name" : "variable.other.mq4" }
+			},
+			"end" : "(=|;)"
 		},
 		{
 			"begin" : "\\b(extern|static)\\s+",
@@ -74,8 +85,11 @@
 			"end" : "(=|;|\\n)"
 		},
 		{
-			"name" : "keyword.control.mq4",
-			"match" : "\\b(break|case|continue|default|else|for|if|return|switch|while)\\b"
+			"begin" : "\\b(break|case|continue|default|else|for|if|return|switch|while)\\b",
+			"beginCaptures" : {
+				"1" : { "name" : "keyword.control.mq4" }
+			},
+			"end" : "(\\(|;|:|\\{|\\n)"
 		},
 		{
 			"name" : "constant.language.boolean.true.mq4",
