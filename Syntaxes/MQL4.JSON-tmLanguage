@@ -12,20 +12,16 @@
 				"1" : { "name" : "storage.type.function.mq4" },
 				"2" : { "name" : "entity.name.function.mq4" }
 			},
-			"patterns" : [{
-				"begin" : "\\(",
-				"patterns" : [
-					{
-						"match" : "\\b(int|void|bool|double|datetime|char|string|color)\\s+",
-						"name" : "storage.type.parameter.mq4"
-					},{
-						"match" : "(\\w*)",
-						"name" : "variable.parameter.function.mq4"
-				}],
-				"end" : "\\)",
-				"name" : "meta.function.parameter.list.mq4"
-			}],
-			"end" : "(\\n*)?(\\s*)?{",
+			"patterns": [
+				{
+					"match" : "(\\s*)?(\\b(int|void|bool|double|datetime|char|string|color)\\b)(\\s+)(\\w*)",
+					"captures" : {
+						"1" : { "name" : "storage.type.parameter.mq4" },
+						"2" : { "name" : "variable.parameter.function.mq4" }
+					}
+				}
+			],
+			"end" : "\\)",
 			"name" : "meta.function.mq4"
 		},
 		{
@@ -68,7 +64,11 @@
 				"1" : { "name" : "storage.type.mq4" },
 				"2" : { "name" : "variable.other.mq4" }
 			},
-			"end" : "(=|;)"
+			"patterns" : [{
+				"match" : ",(\\s+)?(\\w*)",
+				"name" : "variable.other.mq4"
+			}],
+			"end" : ";"
 		},
 		{
 			"begin" : "\\b(extern|static)\\s+",
@@ -82,7 +82,7 @@
 					"match" : "(\\w*)",
 					"name" : "variable.other.mq4"
 				}],
-			"end" : "(=|;|\\n)"
+			"end" : ";"
 		},
 		{
 			"begin" : "\\b(break|case|continue|default|else|for|if|return|switch|while)\\b",
@@ -112,8 +112,12 @@
 			"match" : "!|%|\\*|\\-|\\+|\\/|==|=|!=|<=|>=|<|>|&&|\\|\\||\\*=|\\+=|\\-=|\\+\\+|\\-\\-|\\/=|%=|>>=|<<=|&=|\\|=|\\^=|>>|<<|\\^|\\|~"
 		},
 		{
-			"name" : "constant.language.mq4",
-			"match" : "#(import|define|property)\\s+"
+			"begin" : "#(import|define|property)\\s+(\\w*)",
+			"beginCaptures" : {
+				"1" : { "name" : "constant.language.mq4" },
+				"2" : { "name" : "variable.other.mq4" }
+			},
+			"end" : "\\n"
 		},
 		{
 			"name" : "punctuation.terminator.statement.mq4",

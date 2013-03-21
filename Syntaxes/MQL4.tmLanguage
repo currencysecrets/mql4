@@ -32,33 +32,27 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(\n*)?(\s*)?{</string>
+			<string>\)</string>
 			<key>name</key>
 			<string>meta.function.mq4</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>begin</key>
-					<string>\(</string>
-					<key>end</key>
-					<string>\)</string>
-					<key>name</key>
-					<string>meta.function.parameter.list.mq4</string>
-					<key>patterns</key>
-					<array>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
 						<dict>
-							<key>match</key>
-							<string>\b(int|void|bool|double|datetime|char|string|color)\s+</string>
 							<key>name</key>
 							<string>storage.type.parameter.mq4</string>
 						</dict>
+						<key>2</key>
 						<dict>
-							<key>match</key>
-							<string>(\w*)</string>
 							<key>name</key>
 							<string>variable.parameter.function.mq4</string>
 						</dict>
-					</array>
+					</dict>
+					<key>match</key>
+					<string>(\s*)?(\b(int|void|bool|double|datetime|char|string|color)\b)(\s+)(\w*)</string>
 				</dict>
 			</array>
 		</dict>
@@ -179,7 +173,16 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(=|;)</string>
+			<string>;</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>,(\s+)?(\w*)</string>
+					<key>name</key>
+					<string>variable.other.mq4</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -193,7 +196,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(=|;|\n)</string>
+			<string>;</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -255,10 +258,23 @@
 			<string>keyword.operator.mq4</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>#(import|define|property)\s+</string>
-			<key>name</key>
-			<string>constant.language.mq4</string>
+			<key>begin</key>
+			<string>#(import|define|property)\s+(\w*)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language.mq4</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.mq4</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\n</string>
 		</dict>
 		<dict>
 			<key>match</key>
