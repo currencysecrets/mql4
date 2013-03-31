@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+#property link                  "${0:http://www.metaquotes.net}"
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>propertylink</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>string</description>
+</snippet>
