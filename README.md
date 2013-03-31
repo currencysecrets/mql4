@@ -16,14 +16,39 @@ I like MetaTrader though, but coding on their platform can be a real nightmare.
 
 So, I decided to couple the best text editor in the world with the best automated forex trading language in the world. And you now have before you the result of a couple of weeks work in getting all aspects of the MQL4 language into a Sublime Text snippet package.
 
-Installation
-============
+Installation/Updates
+====================
 
-To install the package either:
+To install the package by ZIP file do:
 
 + Download the zip file either in GitHub (click on Zip button above) or on the website at http://www.currencysecrets.com/mql4-language-package
 + Unzip the file into Sublime Text's "Packages" folder (found by clicking "Preferences" menu then "Browse Packages...")
 + Restart Sublime Text
+
+To install the package using the command line (CLI) do:
+
+##### On linux:
+```bash
+cd ~/.config/sublime-text-2/Packages/
+git clone https://github.com/currencysecrets/mql4.git
+```
+##### On OSX:
+```bash
+cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+git clone https://github.com/currencysecrets/mql4.git
+```
+## Pull updates
+
+##### On linux:
+```bash
+cd ~/.config/sublime-text-2/Packages/mql4/
+git pull
+```
+##### On OSX:
+```bash
+cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/mql4/
+git pull
+```
 
 You may also want to download WBond's Package Control found here: http://wbond.net/sublime_packages/package_control
 
