@@ -1,0 +1,62 @@
+<snippet>
+  <content><![CDATA[
+//+------------------------------------------------------------------+
+//| ${1:Name_of_file}.mq4
+//| Copyright 2013, ${2:Name of organisation}
+//| ${3:website URL}
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2013, ${2}"
+#property link      "${3}"
+
+#property indicator_chart_window
+#property indicator_buffers 2
+#property indicator_color1 Red
+#property indicator_color2 Green
+
+//--- buffers
+
+double ${4:ExtMapBuffer1}[];
+double ${5:ExtMapBuffer2}[];
+
+//+------------------------------------------------------------------+
+//| Custom indicator initialization function                         |
+//+------------------------------------------------------------------+
+int init()
+  {
+//---- indicators
+   SetIndexStyle(0,DRAW_LINE);
+   SetIndexBuffer(0,${4:ExtMapBuffer1});
+   SetIndexStyle(1,DRAW_LINE);
+   SetIndexBuffer(1,${5:ExtMapBuffer2});
+   ${6}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| Custom indicator deinitialization function                       |
+//+------------------------------------------------------------------+
+int deinit()
+  {
+//----
+   ${7}  
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| Custom indicator iteration function                              |
+//+------------------------------------------------------------------+
+int start()
+  {
+   int    counted_bars=IndicatorCounted();
+//----
+   ${0}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>indicatorstart</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.mq4</scope>
+  <description>Indicator template</description>
+</snippet>
