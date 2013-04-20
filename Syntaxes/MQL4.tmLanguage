@@ -16,8 +16,150 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.mq4</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(//).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.double-slash.mq4</string>
+		</dict>
+		<dict>
 			<key>begin</key>
-			<string>\b(int|void|bool|double|datetime|char|string|color)\s+(\w*)(\s*)?\(</string>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(break|case|continue|default|else if|else|for|if|return|switch|while)\b</string>
+			<key>name</key>
+			<string>keyword.control.flow.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\!|&amp;&amp;|\|\|</string>
+			<key>name</key>
+			<string>keyword.operator.logical.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(true|TRUE)\b</string>
+			<key>name</key>
+			<string>constant.language.boolean.true.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(false|FALSE)\b</string>
+			<key>name</key>
+			<string>constant.language.boolean.false.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(null|NULL)\b</string>
+			<key>name</key>
+			<string>constant.language.null.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(empty|EMPTY)\b</string>
+			<key>name</key>
+			<string>constant.language.empty.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>&lt;\=|&gt;\=|\=\=|&lt;|&gt;|\!\=</string>
+			<key>name</key>
+			<string>keyword.operator.comparison.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\+\=|-\=|\*\=|/\=|//\=|%\=|&amp;\=|\|\=|\^\=|&gt;&gt;\=|&lt;&lt;\=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.augmented.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>%|\*|\-|\+|\/|\+\+|\-\-|\^|&gt;&gt;|&lt;&lt;</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>#(import|include)\s+</string>
+			<key>name</key>
+			<string>keyword.control.preprocessor.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>#define\s+</string>
+			<key>name</key>
+			<string>keyword.control.define.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>#property\s+</string>
+			<key>name</key>
+			<string>keyword.control.property.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([1-9]+[0-9]*|0)\b</string>
+			<key>name</key>
+			<string>constant.numeric.integer.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+\.?\d*</string>
+			<key>name</key>
+			<string>constant.numeric.double.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>;</string>
+			<key>name</key>
+			<string>punctuation.terminator.statement.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\{|\}</string>
+			<key>name</key>
+			<string>meta.brace.curly.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\(|\)</string>
+			<key>name</key>
+			<string>meta.brace.round.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\[|\]</string>
+			<key>name</key>
+			<string>meta.brace.square.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(([A-Z_]+)(\d*)?)\b</string>
+			<key>name</key>
+			<string>constant.language.mq4</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\b(int|void|bool|double|datetime|char|string|color)\s+([a-zA-Z][a-zA-Z0-9_]*)(\s*)?(\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -30,15 +172,30 @@
 					<key>name</key>
 					<string>entity.name.function.mq4</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.begin.mq4</string>
+				</dict>
 			</dict>
 			<key>end</key>
-			<string>\)</string>
+			<string>\{</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.mq4</string>
+				</dict>
+			</dict>
 			<key>name</key>
 			<string>meta.function.mq4</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>captures</key>
+					<key>begin</key>
+					<string>\b(int|void|string|bool|double|color|datetime|char)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
+					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
@@ -48,19 +205,86 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>variable.parameter.function.mq4</string>
+							<string>variable.other.function.mq4</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.assignment.parameter.mq4</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.variable.parameter.mq4</string>
 						</dict>
 					</dict>
-					<key>match</key>
-					<string>(\s*)?(\b(int|void|bool|double|datetime|char|string|color)\b)(\s+)(\w*)</string>
+					<key>end</key>
+					<string>(,|\))</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>\b(([A-Z_]+)(\d*)?)\b</string>
-			<key>name</key>
-			<string>constant.language.mq4</string>
+			<key>comment</key>
+			<string>This is for capturing variable declaration outside function parameters, eg. int i = 0, j, k = 1;</string>
+			<key>begin</key>
+			<string>\b(extern|static)?\s*\b(int|void|bool|double|datetime|char|string|color)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier.mq4</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.mq4</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.mq4</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.variable.assignment.mq4</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.variable.mq4</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>;</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>,\s*([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.mq4</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.variable.assignment.mq4</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.variable.mq4</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>,|\s*|;</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -74,7 +298,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>'</string>
+			<string>'|\n</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
@@ -109,202 +333,6 @@
 			</dict>
 			<key>name</key>
 			<string>string.quoted.double.mq4</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.documentation.mq4</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.mq4</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.mq4</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(//).*(\n)?</string>
-			<key>name</key>
-			<string>comment.line.double-slash.mq4</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\b(int|void|bool|double|datetime|char|string|color)\s+(\w*)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.mq4</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>;</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>,(\s+)?(\w*)</string>
-					<key>name</key>
-					<string>variable.other.mq4</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\b(extern|static)\s+</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.modifier.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>;</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\b(int|void|bool|double|datetime|char|string|color)\s+</string>
-					<key>name</key>
-					<string>storage.type.mq4</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(\w*)</string>
-					<key>name</key>
-					<string>variable.other.mq4</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\b(break|case|continue|default|else|for|if|return|switch|while)\b</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>(\(|;|:|\{|\n)</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(true|TRUE)\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.true.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(false|FALSE)\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.false.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(null|NULL)\b</string>
-			<key>name</key>
-			<string>constant.language.null.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(empty|EMPTY)\b</string>
-			<key>name</key>
-			<string>constant.language.empty.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>!|%|\*|\-|\+|\/|==|=|!=|&lt;=|&gt;=|&lt;|&gt;|&amp;&amp;|\|\||\*=|\+=|\-=|\+\+|\-\-|\/=|%=|&gt;&gt;=|&lt;&lt;=|&amp;=|\|=|\^=|&gt;&gt;|&lt;&lt;|\^|\|~</string>
-			<key>name</key>
-			<string>keyword.operator.mq4</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>#(import|define|property)\s+(\w*)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>constant.language.mq4</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\n</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>;</string>
-			<key>name</key>
-			<string>punctuation.terminator.statement.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\.</string>
-			<key>name</key>
-			<string>meta.delimiter.method.period.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\{|\}</string>
-			<key>name</key>
-			<string>meta.brace.curly.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\(|\)</string>
-			<key>name</key>
-			<string>meta.brace.round.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\[|\]</string>
-			<key>name</key>
-			<string>meta.brace.square.mq4</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
