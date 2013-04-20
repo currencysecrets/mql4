@@ -4,8 +4,8 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>mql4</string>
 		<string>mq4</string>
+		<string>mql4</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>(^.)?\{</string>
