@@ -194,7 +194,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>\b(int|void|string|bool|double|color|datetime|char)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
+					<string>\b(int|void|string|bool|double|color|datetime|char)(&amp;)?\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -205,14 +205,19 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>variable.other.function.mq4</string>
+							<string>storage.type.parameter.mq4</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.operator.assignment.parameter.mq4</string>
+							<string>variable.other.function.mq4</string>
 						</dict>
 						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.assignment.parameter.mq4</string>
+						</dict>
+						<key>5</key>
 						<dict>
 							<key>name</key>
 							<string>constant.numeric.variable.parameter.mq4</string>
