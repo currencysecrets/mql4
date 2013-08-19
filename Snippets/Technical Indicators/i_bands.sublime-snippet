@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-iBands( ${1:str symbol}, ${2:int timeframe=PERIOD_M1|PERIOD_M5|PERIOD_M15|PERIOD_M30|PERIOD_H1|PERIOD_H4|PERIOD_D1|PERIOD_W1|PERIOD_MN1|0}, ${3:int period}, ${4:int deviation}, ${5:int bands_shift}, ${6:int mode=MODE_UPPER|MODE_LOWER}, ${7:int shift} )${0}
+iBands( ${1:str symbol}, ${2:int timeframe=PERIOD_M1|PERIOD_M5|PERIOD_M15|PERIOD_M30|PERIOD_H1|PERIOD_H4|PERIOD_D1|PERIOD_W1|PERIOD_MN1|0}, ${3:int period}, ${4:int deviation}, ${5:int bands_shift}, ${6:int mode=MODE_UPPER|MODE_LOWER}, ${7:int applied_price=PRICE_OPEN|PRICE_HIGH|PRICE_LOW|PRICE_CLOSE|PRICE_MEDIAN|PRICE_TYPICAL|PRICE_WEIGHTED}, ${8:int shift} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>ibands</tabTrigger>
