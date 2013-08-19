@@ -12,42 +12,36 @@
 	<key>foldingStopMarker</key>
 	<string>(^\s*)?\}</string>
 	<key>name</key>
-	<string>MetaQuotes (MQL4)</string>
+	<string>MQL4</string>
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.mq4</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(//).*$\n?</string>
-			<key>name</key>
-			<string>comment.line.double-slash.mq4</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.mq4</string>
+			<key>include</key>
+			<string>#comments</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(break|case|continue|default|else if|else|for|if|return|switch|while)\b</string>
+			<string>\b(break|case|continue|default|do|else|for|if|return|switch|while)\b</string>
 			<key>name</key>
-			<string>keyword.control.flow.mq4</string>
+			<string>keyword.control.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\!|&amp;&amp;|\|\|</string>
+			<string>#\b(property|import|define|include)\b</string>
 			<key>name</key>
-			<string>keyword.operator.logical.mq4</string>
+			<string>keyword.control.preprocessor.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(bool|char|double|int|short|void|datetime|string)\b</string>
+			<key>name</key>
+			<string>storage.type.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(extern|static)\b</string>
+			<key>name</key>
+			<string>storage.modifier.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -75,6 +69,24 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b([1-9]+[0-9]*|0[a-z,A-Z,0-9]*)\b</string>
+			<key>name</key>
+			<string>constant.numeric.integer.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+\.?\d*</string>
+			<key>name</key>
+			<string>constant.numeric.double.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(([A-Z_]+)(\d*)?)\b</string>
+			<key>name</key>
+			<string>constant.language.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>&lt;\=|&gt;\=|\=\=|&lt;|&gt;|\!\=</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.mq4</string>
@@ -93,201 +105,48 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>#(import|include)\s+</string>
-			<key>name</key>
-			<string>keyword.control.preprocessor.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>#define\s+</string>
-			<key>name</key>
-			<string>keyword.control.define.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>#property\s+</string>
-			<key>name</key>
-			<string>keyword.control.property.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b([1-9]+[0-9]*|0)\b</string>
-			<key>name</key>
-			<string>constant.numeric.integer.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\d+\.?\d*</string>
-			<key>name</key>
-			<string>constant.numeric.double.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>;</string>
-			<key>name</key>
-			<string>punctuation.terminator.statement.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\{|\}</string>
-			<key>name</key>
-			<string>meta.brace.curly.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\(|\)</string>
-			<key>name</key>
-			<string>meta.brace.round.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\[|\]</string>
-			<key>name</key>
-			<string>meta.brace.square.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>=</string>
 			<key>name</key>
 			<string>keyword.operator.assignment.mq4</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(([A-Z_]+)(\d*)?)\b</string>
+			<string>\!|&amp;&amp;|\|\|</string>
 			<key>name</key>
-			<string>constant.language.mq4</string>
+			<string>keyword.operator.logical.mq4</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(int|void|bool|double|datetime|char|string|color)\s+([a-zA-Z][a-zA-Z0-9_]*)(\s*)?(\()</string>
+			<string>"</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.mq4</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.mq4</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.begin.mq4</string>
+					<string>punctuation.definition.string.begin.mql4</string>
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\{</string>
+			<string>"</string>
 			<key>endCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.end.mq4</string>
+					<string>punctuation.definition.string.end.mql4</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.function.mq4</string>
+			<string>string.quoted.double.mql4</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>begin</key>
-					<string>\b(int|void|string|bool|double|color|datetime|char)(&amp;)?\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.parameter.mq4</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.parameter.mq4</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>variable.other.function.mq4</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.operator.assignment.parameter.mq4</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>constant.numeric.variable.parameter.mq4</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(,|\))</string>
+					<key>include</key>
+					<string>#string_escaped_char</string>
 				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>This is for capturing variable declaration outside function parameters, eg. int i = 0, j, k = 1;</string>
-			<key>begin</key>
-			<string>\b(extern|static)?\s*\b(int|void|bool|double|datetime|char|string|color)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
 				<dict>
-					<key>name</key>
-					<string>storage.modifier.mq4</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.mq4</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.mq4</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.variable.assignment.mq4</string>
-				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>constant.numeric.variable.mq4</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>;</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>,\s*([A-Za-z_][A-Za-z0-9_]*)\s*(\=)?(\s*(\d+\.?\d*))?</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>variable.other.mq4</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.operator.variable.assignment.mq4</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>constant.numeric.variable.mq4</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>,|\s*|;</string>
+					<key>include</key>
+					<string>#string_placeholder</string>
 				</dict>
 			</array>
 		</dict>
@@ -299,47 +158,291 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.mq4</string>
+					<string>punctuation.definition.string.begin.mql4</string>
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>'|\n</string>
+			<string>'</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.mq4</string>
+					<string>punctuation.definition.string.end.mql4</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single.mq4</string>
+			<string>string.quoted.single.mql4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#string_escaped_char</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#block</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>"</string>
+			<string>(?x)
+    		(?:  ^                                 # begin-of-line
+    		  |
+    		     (?: (?= \s )           (?&lt;!else|new|return) (?&lt;=\w)      #  or word + space before name
+    		       | (?= \s*[A-Za-z_] ) (?&lt;!&amp;&amp;)       (?&lt;=[*&amp;&gt;])   #  or type modifier before name
+    		     )
+    		)
+    		(\s*) (?!(while|for|do|if|else|switch|catch|return|r?iterate)\s*\()
+    		(
+    			(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ |                  # actual name
+    			(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )  # if it is a C++ operator
+    		)
+    		 \s*(?=\()</string>
 			<key>beginCaptures</key>
 			<dict>
-				<key>0</key>
+				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.mq4</string>
+					<string>punctuation.whitespace.function.leading.mql4</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.mql4</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.mql4</string>
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>"</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.mq4</string>
-				</dict>
-			</dict>
+			<string>(?&lt;=\})|(?=#)|(;)</string>
 			<key>name</key>
-			<string>string.quoted.double.mq4</string>
+			<string>meta.function.mql4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#parens</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#block</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>block</key>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>meta.block.mql4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#block_innards</string>
+				</dict>
+			</array>
+		</dict>
+		<key>block_innards</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.whitespace.support.function.leading.mql4</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.C99.mql4</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.whitespace.function-call.leading.mql4</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.any-method.mql4</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.parameters.mql4</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?x) (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
+			(\b
+				(?!(while|for|do|if|else|switch|catch|enumerate|return|r?iterate)\s*\()(?:(?!NS)[A-Za-z_][A-Za-z0-9_]*+\b | :: )++                  # actual name
+			)
+			 \s*(\()</string>
+					<key>name</key>
+					<string>meta.function-call.mql4</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.mql4</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.parameters.mql4</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?x)
+			        (?x)
+			(?:
+			     (?: (?= \s )           (?&lt;!else|new|return) (?&lt;=\w)\s+      #  or word + space before name
+			     )
+			)
+			(
+				(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++    |              # actual name
+				(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )?  # if it is a C++ operator
+			)
+			 \s*(\()</string>
+					<key>name</key>
+					<string>meta.initialization.mql4</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#block</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$base</string>
+				</dict>
+			</array>
+		</dict>
+		<key>comments</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>meta.toc-list.banner.block.mql4</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>^/\* =(\s*.*?)\s*= \*/$\n?</string>
+					<key>name</key>
+					<string>comment.block.mql4</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>/\*</string>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.mql4</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\*/</string>
+					<key>name</key>
+					<string>comment.block.mql4</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\*/.*\n</string>
+					<key>name</key>
+					<string>invalid.illegal.stray-comment-end.mql4</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>meta.toc-list.banner.line.mql4</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>^// =(\s*.*?)\s*=\s*$\n?</string>
+					<key>name</key>
+					<string>comment.line.banner.mql4</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>//</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.mql4</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>$\n?</string>
+					<key>name</key>
+					<string>comment.line.double-slash.mql4</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>(?&gt;\\\s*\n)</string>
+							<key>name</key>
+							<string>punctuation.separator.continuation.mql4</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>parens</key>
+		<dict>
+			<key>begin</key>
+			<string>\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>meta.parens.mql4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$base</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.mq4</string>
 	<key>uuid</key>
