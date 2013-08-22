@@ -87,6 +87,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(([a-zA-Z_]+)([a-zA-Z0-9_]*)?)\b</string>
+			<key>name</key>
+			<string>variable.other.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>&lt;\=|&gt;\=|\=\=|&lt;|&gt;|\!\=</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.mq4</string>
