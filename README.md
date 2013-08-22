@@ -21,7 +21,7 @@ Installation/Updates
 
 #### Package Manager
 
-The easiest way to install this package in Sublime Text is to use [WBond's Package Control][https://sublime.wbond.net/].
+The easiest way to install this package in Sublime Text is to use WBond's Package Control - https://sublime.wbond.net/
 
 Once you have this installed, simply run `Install Package` and select `MetaQuotes (MQL4) Language Package` in the prompt.
 
