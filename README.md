@@ -19,6 +19,17 @@ So, I decided to couple the best text editor in the world with the best automate
 Installation/Updates
 ====================
 
+#### Package Manager
+
+The easiest way to install this package in Sublime Text is to use [WBond's Package Control][https://sublime.wbond.net/].
+
+Once you have this installed, simply run `Install Package` and select `MetaQuotes (MQL4) Language Package` in the prompt.
+
+Bang. You're done!
+
+
+#### Manually
+
 To install the package by ZIP file do:
 
 + Download the zip file either in GitHub (click on Zip button above) or on the website at http://www.currencysecrets.com/mql4-language-package
