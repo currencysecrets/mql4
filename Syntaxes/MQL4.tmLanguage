@@ -69,18 +69,6 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b([1-9]+[0-9]*|0[a-z,A-Z,0-9]*)\b</string>
-			<key>name</key>
-			<string>constant.numeric.integer.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\d+\.?\d*</string>
-			<key>name</key>
-			<string>constant.numeric.double.mq4</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>\b(([A-Z_]+)(\d*)?)\b</string>
 			<key>name</key>
 			<string>constant.language.mql4</string>
@@ -90,6 +78,18 @@
 			<string>\b(([a-zA-Z_]+)([a-zA-Z0-9_]*)?)\b</string>
 			<key>name</key>
 			<string>variable.other.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([1-9]+[0-9]*|0[a-z,A-Z,0-9]*)\b</string>
+			<key>name</key>
+			<string>constant.numeric.integer.mq4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(\d*\.\d*)\b</string>
+			<key>name</key>
+			<string>constant.numeric.double.mq4</string>
 		</dict>
 		<dict>
 			<key>match</key>
