@@ -19,7 +19,7 @@ So, I decided to couple the best text editor in the world with the best automate
 Installation/Updates
 ====================
 
-#### Package Manager
+#### Package Control
 
 The easiest way to install this package in Sublime Text is to use WBond's Package Control - https://sublime.wbond.net/
 
