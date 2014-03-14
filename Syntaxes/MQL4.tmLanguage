@@ -21,7 +21,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(break|case|continue|default|do|else|for|if|return|switch|while)\b</string>
+			<string>\b(const|private|protected|public|virtual)\b</string>
+			<key>name</key>
+			<string>storage.modifier.source.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(break|case|continue|default|delete|do|else|for|if|new|operator|return|sizeof|switch|while)\b</string>
 			<key>name</key>
 			<string>keyword.control.mql4</string>
 		</dict>
@@ -33,13 +39,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(bool|char|double|int|short|void|datetime|string)\b</string>
+			<string>\b(bool|char|class|color|datetime|double|enum|float|int|long|short|string|struct|uchar|uint|ulong|ushort|void)\b</string>
 			<key>name</key>
 			<string>storage.type.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(extern|static)\b</string>
+			<string>\b(extern|input|static)\b</string>
 			<key>name</key>
 			<string>storage.modifier.mql4</string>
 		</dict>
@@ -47,25 +53,31 @@
 			<key>match</key>
 			<string>\b(true|TRUE)\b</string>
 			<key>name</key>
-			<string>constant.language.boolean.true.mq4</string>
+			<string>constant.language.boolean.true.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(false|FALSE)\b</string>
 			<key>name</key>
-			<string>constant.language.boolean.false.mq4</string>
+			<string>constant.language.boolean.false.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(null|NULL)\b</string>
 			<key>name</key>
-			<string>constant.language.null.mq4</string>
+			<string>constant.language.null.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(empty|EMPTY)\b</string>
 			<key>name</key>
-			<string>constant.language.empty.mq4</string>
+			<string>constant.language.empty.mql4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(this|strict|#define|#import|#include|#property|template|typename)\b</string>
+			<key>name</key>
+			<strong>constant.language.other.mql4</strong>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -83,43 +95,43 @@
 			<key>match</key>
 			<string>\b([1-9]+[0-9]*|0[a-z,A-Z,0-9]*)\b</string>
 			<key>name</key>
-			<string>constant.numeric.integer.mq4</string>
+			<string>constant.numeric.integer.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(\d*\.\d*)\b</string>
 			<key>name</key>
-			<string>constant.numeric.double.mq4</string>
+			<string>constant.numeric.double.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>&lt;\=|&gt;\=|\=\=|&lt;|&gt;|\!\=</string>
 			<key>name</key>
-			<string>keyword.operator.comparison.mq4</string>
+			<string>keyword.operator.comparison.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\+\=|-\=|\*\=|/\=|//\=|%\=|&amp;\=|\|\=|\^\=|&gt;&gt;\=|&lt;&lt;\=</string>
 			<key>name</key>
-			<string>keyword.operator.assignment.augmented.mq4</string>
+			<string>keyword.operator.assignment.augmented.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>%|\*|\-|\+|\/|\+\+|\-\-|\^|&gt;&gt;|&lt;&lt;</string>
 			<key>name</key>
-			<string>keyword.operator.arithmetic.mq4</string>
+			<string>keyword.operator.arithmetic.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>=</string>
 			<key>name</key>
-			<string>keyword.operator.assignment.mq4</string>
+			<string>keyword.operator.assignment.mql4</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\!|&amp;&amp;|\|\|</string>
 			<key>name</key>
-			<string>keyword.operator.logical.mq4</string>
+			<string>keyword.operator.logical.mql4</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -450,7 +462,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.mq4</string>
+	<string>source.mql4</string>
 	<key>uuid</key>
 	<string>192620ec-60be-4dc4-99a8-5c59c6000ced</string>
 </dict>
