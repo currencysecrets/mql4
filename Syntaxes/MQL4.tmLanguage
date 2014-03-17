@@ -75,7 +75,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(this|strict|#define|#import|#include|#property|template|typename)\b</string>
+			<string>\b(this|strict|template|typename)\b</string>
 			<key>name</key>
 			<strong>constant.language.other.mql4</strong>
 		</dict>
