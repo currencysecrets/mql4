@@ -460,6 +460,45 @@
 				</dict>
 			</array>
 		</dict>
+		<key>string_escaped_char</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\(\\|[abefnprtv'"?]|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8})
+</string>
+					<key>name</key>
+					<string>constant.character.escape.mql4</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>invalid.illegal.unknown-escape.mql4</string>
+				</dict>
+			</array>
+		</dict>
+		<key>string_placeholder</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?x)%
+                        (?x)% (\d+\$)? 								# field (argument #) 
+                        [#0\- +']* 									# flags 
+                        [,;:_]? 									# separator character (AltiVec)
+                        ((-?\d+)|\*(-?\d+\$)?)? 					# minimum field width 
+                        (\.((-?\d+)|\*(-?\d+\$)?)?)? 				# precision 
+                        (hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? 		# length modifier 
+                        [diouxXDOUeEfFgGaACcSspn%] 					# conversion type
+                    </string>
+					<key>name</key>
+					<string>constant.other.placeholder.mql4</string>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>scopeName</key>
 	<string>source.mql4</string>
