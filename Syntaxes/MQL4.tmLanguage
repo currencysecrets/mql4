@@ -486,7 +486,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.mql4</string>
+	<string>source.mq4</string>
 	<key>uuid</key>
 	<string>192620ec-60be-4dc4-99a8-5c59c6000ced</string>
 </dict>
