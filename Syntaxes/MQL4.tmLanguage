@@ -4,8 +4,8 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>mq4</string>
 		<string>mql4</string>
+		<string>mq4</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>(^.)?\{</string>
@@ -212,7 +212,7 @@
     		       | (?= \s*[A-Za-z_] ) (?&lt;!&amp;&amp;)       (?&lt;=[*&amp;&gt;])   #  or type modifier before name
     		     )
     		)
-    		(\s*) (?!(while|for|do|if|else|switch|catch|return|r?iterate)\s*\()
+    		(\s*) (?!(while|for|do|if|else|switch|catch|return)\s*\()
     		(
     			(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ |                  # actual name
     			(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )  # if it is a C++ operator
@@ -316,11 +316,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(?x) (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
-			(\b
-				(?!(while|for|do|if|else|switch|catch|enumerate|return|r?iterate)\s*\()(?:(?!NS)[A-Za-z_][A-Za-z0-9_]*+\b | :: )++                  # actual name
-			)
-			 \s*(\()</string>
+					<string>(?x) (?: (?= \s ) (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))? (\b (?!(while|for|do|if|else|switch|catch|return)\s*\()(?:(?!NS)[A-Za-z_][A-Za-z0-9_]*+\b | :: )++ ) \s*(\()</string>
 					<key>name</key>
 					<string>meta.function-call.mql4</string>
 				</dict>
@@ -339,17 +335,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(?x)
-			        (?x)
-			(?:
-			     (?: (?= \s )           (?&lt;!else|new|return) (?&lt;=\w)\s+      #  or word + space before name
-			     )
-			)
-			(
-				(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++    |              # actual name
-				(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )?  # if it is a C++ operator
-			)
-			 \s*(\()</string>
+					<string>(?x) (?x) (?: (?: (?= \s ) (?&lt;!else|new|return) (?&lt;=\w)\s+ ) ) ( (?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ | (?: (?&lt;=operator) (?: [-*&&lt;&gt;=+!]+ | \(\) | \[\] ) )? ) \s*(\()</string>
 					<key>name</key>
 					<string>meta.initialization.mql4</string>
 				</dict>
@@ -466,8 +452,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\(\\|[abefnprtv'"?]|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8})
-</string>
+					<string>\\(\\|[abefnprtv'"?]|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8})</string>
 					<key>name</key>
 					<string>constant.character.escape.mql4</string>
 				</dict>
@@ -486,13 +471,13 @@
 				<dict>
 					<key>match</key>
 					<string>(?x)%
-                        (?x)% (\d+\$)? 								# field (argument #) 
-                        [#0\- +']* 									# flags 
-                        [,;:_]? 									# separator character (AltiVec)
-                        ((-?\d+)|\*(-?\d+\$)?)? 					# minimum field width 
-                        (\.((-?\d+)|\*(-?\d+\$)?)?)? 				# precision 
-                        (hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? 		# length modifier 
-                        [diouxXDOUeEfFgGaACcSspn%] 					# conversion type
+                        (?x)% (\d+\$)? 								
+                        [#0\- +']* 									
+                        [,;:_]? 									
+                        ((-?\d+)|\*(-?\d+\$)?)? 					
+                        (\.((-?\d+)|\*(-?\d+\$)?)?)? 				
+                        (hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? 		
+                        [diouxXDOUeEfFgGaACcSspn%] 					
                     </string>
 					<key>name</key>
 					<string>constant.other.placeholder.mql4</string>
