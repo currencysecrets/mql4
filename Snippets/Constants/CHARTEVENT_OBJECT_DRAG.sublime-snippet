@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-IDABORT${0}
+CHARTEVENT_OBJECT_DRAG${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>IDABORT</tabTrigger>
+	<tabTrigger>CHARTEVENT_OBJECT_DRAG</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.mq4</scope>
-	<description>3</description>
+	<description>Drag & drop of graphical object</description>
 </snippet>
