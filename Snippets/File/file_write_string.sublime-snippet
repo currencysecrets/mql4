@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileWriteString( ${1:int handle}, ${2:str value}, ${3:int length} )${0}
+FileWriteString( ${1:int file_handle}, ${2:str text_string}, ${3:int length=-1} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>filewritestring</tabTrigger>

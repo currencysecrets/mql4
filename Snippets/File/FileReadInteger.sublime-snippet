@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileReadInteger( ${1:int handle}, ${2:int size=LONG_VALUE*|CHAR_VALUE|SHORT_VALUE} )${0}
+FileReadInteger( ${1:int handle}, ${2:int size=INT_VALUE*|CHAR_VALUE|SHORT_VALUE} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>FileReadInteger</tabTrigger>

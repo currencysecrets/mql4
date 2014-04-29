@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+FolderClean( ${1:str folder_name}, ${2:int common_flag=0} )${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>folderclean</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.mq4</scope>
+	<description>bool</description>
+</snippet>

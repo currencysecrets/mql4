@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileWriteDouble( ${1:int handle}, ${2:dbl value}, ${3:int size=DOUBLE_ARRAY*|FLOAT_ARRAY} )${0}
+FileWriteDouble( ${1:int file_handle}, ${2:dbl value} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>FileWriteDouble</tabTrigger>

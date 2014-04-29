@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileSeek( ${1:int handle}, ${2:int offset}, ${3:int origin} )${0}
+FileSeek( ${1:int file_handle}, ${2:long offset}, ${3:ENUM_FILE_POSITION origin} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>fileseek</tabTrigger>

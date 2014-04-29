@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileClose( ${1:int handle} )${0}
+FileClose( ${1:int file_handle} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>FileClose</tabTrigger>

@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileOpen( ${1:str filename}, ${2:int mode}, ${3:int delimiter=";"} )${0}
+FileOpen( ${1:str file_name}, ${2:int open_flags}, ${3:short delimiter="\t"}, ${4:uint codepage=CP_ACP} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>FileOpen</tabTrigger>

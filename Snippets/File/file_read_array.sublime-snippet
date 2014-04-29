@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-FileReadArray( ${1:int handle}, ${2:void array[]}, ${3:int start}, ${4:int count} )${0}
+FileReadArray( ${1:int file_handle}, ${2:void& array[]}, ${3:int start=0}, ${4:int count=WHOLE_ARRAY} )${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>filereadarray</tabTrigger>
