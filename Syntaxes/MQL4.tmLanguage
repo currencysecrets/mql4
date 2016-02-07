@@ -6,6 +6,7 @@
 	<array>
 		<string>mql4</string>
 		<string>mq4</string>
+		<string>mqh</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>(^.)?\{</string>
