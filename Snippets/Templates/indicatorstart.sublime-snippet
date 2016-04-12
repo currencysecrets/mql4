@@ -2,11 +2,11 @@
   <content><![CDATA[
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
-//| Copyright 2013, ${2:Name of organisation}
+//| Copyright ${2:2016}, ${2:Name of organisation}
 //| ${3:website URL}
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2013, ${2}"
-#property link      "${3}"
+#property copyright "Copyright ${2}, ${3}"
+#property link      "${4}"
 
 #property indicator_chart_window
 #property indicator_buffers 2
@@ -15,41 +15,41 @@
 
 //--- buffers
 
-double ${4:ExtMapBuffer1}[];
-double ${5:ExtMapBuffer2}[];
+double ${5:ExtMapBuffer1}[];
+double ${6:ExtMapBuffer2}[];
 
 //+------------------------------------------------------------------+
 //| Custom indicator initialization function                         |
 //+------------------------------------------------------------------+
-int init()
+int OnInit()
   {
 //---- indicators
    SetIndexStyle(0,DRAW_LINE);
-   SetIndexBuffer(0,${4:ExtMapBuffer1});
+   SetIndexBuffer(0,${5:ExtMapBuffer1});
    SetIndexStyle(1,DRAW_LINE);
-   SetIndexBuffer(1,${5:ExtMapBuffer2});
-   ${6}
+   SetIndexBuffer(1,${6:ExtMapBuffer2});
+   ${7}
 //----
    return(0);
   }
 //+------------------------------------------------------------------+
 //| Custom indicator deinitialization function                       |
 //+------------------------------------------------------------------+
-int deinit()
+int OnDeinit()
   {
 //----
-   ${7}  
+   ${8}  
 //----
    return(0);
   }
 //+------------------------------------------------------------------+
 //| Custom indicator iteration function                              |
 //+------------------------------------------------------------------+
-int start()
+int OnStart()
   {
    int    counted_bars=IndicatorCounted();
 //----
-   ${0}
+   ${9}
 //----
    return(0);
   }
