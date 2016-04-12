@@ -34,7 +34,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>#\b(property|import|define|include)\b</string>
+			<string>#\b(property|import|define|include|ifdef|ifndef|else|endif)\b</string>
 			<key>name</key>
 			<string>keyword.control.preprocessor.mql4</string>
 		</dict>
