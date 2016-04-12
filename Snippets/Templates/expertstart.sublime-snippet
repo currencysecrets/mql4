@@ -3,7 +3,7 @@
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
 //| Copyright ${2:2016}, ${3:Name of organisation}
-//| ${3:website URL}
+//| ${4:website URL}
 //+------------------------------------------------------------------+
 #property copyright "Copyright ${2}, ${3}"
 #property link      "${4}"
