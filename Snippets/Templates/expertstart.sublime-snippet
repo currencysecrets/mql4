@@ -2,15 +2,15 @@
 	<content><![CDATA[
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
-//| Copyright 2016, ${2:Name of organisation}
+//| Copyright ${2:2016}, ${3:Name of organisation}
 //| ${3:website URL}
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2013, ${2}"
-#property link      "${3}"
+#property copyright "Copyright 2013, ${3}"
+#property link      "${4}"
 
 //--- input parameters
-extern int       ${4:ExtParam1=0};
-extern int       ${5:ExtParam2=0};
+extern int       ${5:ExtParam1=0};
+extern int       ${6:ExtParam2=0};
 
 //+------------------------------------------------------------------+
 //| expert initialization function                                   |
@@ -18,7 +18,7 @@ extern int       ${5:ExtParam2=0};
 int OnInit()
 {
 //----
-  ${6}
+  ${7}
 //----
    return(0);
 }
@@ -28,7 +28,7 @@ int OnInit()
 int OnDeinit()
 {
 //----
-  ${7}
+  ${8}
 //----
    return(0);
 }
@@ -38,7 +38,7 @@ int OnDeinit()
 int OnStart()
 {
 //----
-  ${0}
+  ${9}
 //----
    return(0);
 }
