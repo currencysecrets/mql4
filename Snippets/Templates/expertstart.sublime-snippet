@@ -5,7 +5,7 @@
 //| Copyright ${2:2016}, ${3:Name of organisation}
 //| ${3:website URL}
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2013, ${3}"
+#property copyright "Copyright ${2}, ${3}"
 #property link      "${4}"
 
 //--- input parameters
