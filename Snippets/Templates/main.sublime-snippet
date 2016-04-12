@@ -2,30 +2,20 @@
 	<content><![CDATA[
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
-//| Copyright 2013, ${2:Name of organisation} 
-//| ${3:website URL}
+//| Copyright ${2:2016} , ${3:Name of organisation} 
+//| ${4:website URL}
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2013, ${2}"
-#property link      "${3}"
+#property copyright "Copyright ${2}, ${3}"
+#property link      "${4}"
 
 //--- input parameters
-extern int       ${4:ExtParam1=0};
-extern int       ${5:ExtParam2=0};
+extern int       ${5:ExtParam1=0};
+extern int       ${6:ExtParam2=0};
 
 //+------------------------------------------------------------------+
 //| expert initialization function                                   |
 //+------------------------------------------------------------------+
-int init()
-  {
-//----
-   ${6}
-//----
-   return(0);
-  }
-//+------------------------------------------------------------------+
-//| expert deinitialization function                                 |
-//+------------------------------------------------------------------+
-int deinit()
+int OnInit()
   {
 //----
    ${7}
@@ -33,12 +23,22 @@ int deinit()
    return(0);
   }
 //+------------------------------------------------------------------+
-//| expert start function                                            |
+//| expert deinitialization function                                 |
 //+------------------------------------------------------------------+
-int start()
+int OnDeinit()
   {
 //----
-   ${0}
+   ${8}
+//----
+   return(0);
+  }
+//+------------------------------------------------------------------+
+//| expert start function                                            |
+//+------------------------------------------------------------------+
+int OnStart()
+  {
+//----
+   ${9}
 //----
    return(0);
   }
@@ -47,5 +47,5 @@ int start()
 	<tabTrigger>!main</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.mq4</scope>
-	<description>init(),deinit(),start()</description>
+	<description>OnInit(),OnStart(),OnStart()</description>
 </snippet>
