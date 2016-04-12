@@ -2,7 +2,7 @@
 	<content><![CDATA[
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
-//| Copyright 2013, ${2:Name of organisation}
+//| Copyright 2016, ${2:Name of organisation}
 //| ${3:website URL}
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2013, ${2}"
