@@ -49,7 +49,7 @@ int OnStart()
   {
    int    counted_bars=IndicatorCounted();
 //----
-   ${9}
+   ${0}
 //----
    return(0);
   }
