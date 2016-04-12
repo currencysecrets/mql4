@@ -3,7 +3,7 @@
 //+------------------------------------------------------------------+
 //| expert initialization function                                   |
 //+------------------------------------------------------------------+
-int init()
+int OnInit()
   {
 //----
    ${0}
@@ -15,5 +15,5 @@ int init()
 	<tabTrigger>init</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.mq4</scope>
-	<description>init()</description>
+	<description>OnInit()</description>
 </snippet>
