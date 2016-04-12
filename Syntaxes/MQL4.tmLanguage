@@ -215,7 +215,7 @@
     		)
     		(\s*) (?!(while|for|do|if|else|switch|catch|return)\s*\()
     		(
-    			(?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ |                  # actual name
+    			(?: [A-Za-z_][A-Za-z0-9_]*+ | ::~? )++ |                  # actual name
     			(?: (?&lt;=operator) (?: [-*&amp;&lt;&gt;=+!]+ | \(\) | \[\] ) )  # if it is a C++ operator
     		)
     		 \s*(?=\()</string>
