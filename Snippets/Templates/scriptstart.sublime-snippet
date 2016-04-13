@@ -2,19 +2,19 @@
   <content><![CDATA[
 //+------------------------------------------------------------------+
 //| ${1:Name_of_file}.mq4
-//| Copyright 2013, ${2:Name of organisation}
+//| Copyright ${2:2013}, ${3:Name of organisation}
 //| ${3:website URL}
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2013, ${2}"
-#property link      "${3}"
+#property copyright "Copyright ${2}, ${3}"
+#property link      "${4}"
 
 //+------------------------------------------------------------------+
 //| script program start function                                    |
 //+------------------------------------------------------------------+
-int start()
+int OnStart()
   {
 //----
-   ${0}  
+   ${5}  
 //----
    return(0);
   }

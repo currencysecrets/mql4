@@ -3,7 +3,7 @@
 //+------------------------------------------------------------------+
 //| expert start function                                            |
 //+------------------------------------------------------------------+
-int start()
+int OnStart()
   {
 //----
    ${0}
@@ -15,5 +15,5 @@ int start()
 	<tabTrigger>start</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.mq4</scope>
-	<description>start()</description>
+	<description>OnStart()</description>
 </snippet>
