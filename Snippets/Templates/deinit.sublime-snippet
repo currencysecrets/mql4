@@ -4,12 +4,12 @@
 //| expert deinitialization function                                 |
 //+------------------------------------------------------------------+
 int OnDeinit()
-  {
+{
 //----
    ${0}
 //----
    return(0);
-  }
+}
 //+------------------------------------------------------------------+]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>deinit</tabTrigger>
