@@ -23,7 +23,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(const|private|protected|public|virtual)\b</string>
+			<string>\b(const|private|protected|public|virtual|override)\b</string>
 			<key>name</key>
 			<string>storage.modifier.source.mql4</string>
 		</dict>
