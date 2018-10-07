@@ -149,4 +149,4 @@ Users can also add core individual templates by entering `init`, `deinit` or `st
 Feature Requests
 ----------------
 
-If you any feature requests or amendments to be made to the code please let me know!!
+If you have any feature requests or amendments to be made to the code please let me know!!
