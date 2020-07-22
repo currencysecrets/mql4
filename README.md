@@ -32,7 +32,7 @@ Bang. You're done!
 
 To install the package by ZIP file do:
 
-+ Download the zip file either in GitHub (click on Zip button above) or on the website at http://www.currencysecrets.com/mql4-language-package
++ Download the zip file either in GitHub (click on Zip button above)
 + Unzip the file into Sublime Text's "Packages" folder (found by clicking "Preferences" menu then "Browse Packages...")
 + Restart Sublime Text
 
@@ -150,3 +150,5 @@ Feature Requests
 ----------------
 
 If you any feature requests or amendments to be made to the code please let me know!!
+
+Find me now at [Robot Trading Forex](https://robottradingforex.com)
