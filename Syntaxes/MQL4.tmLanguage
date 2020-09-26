@@ -337,7 +337,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(?x) (?x) (?: (?: (?= \s ) (?&lt;!else|new|return) (?&lt;=\w)\s+ ) ) ( (?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ | (?: (?&lt;=operator) (?: [-*&&lt;&gt;=+!]+ | \(\) | \[\] ) )? ) \s*(\()</string>
+					<string>(?x) (?x) (?: (?: (?= \s ) (?&lt;!else|new|return) (?&lt;=\w)\s+ ) ) ( (?: [A-Za-z_][A-Za-z0-9_]*+ | :: )++ | (?: (?&lt;=operator) (?: [-*&lt;&gt;=+!]+ | \(\) | \[\] ) )? ) \s*(\()</string>
 					<key>name</key>
 					<string>meta.initialization.mql4</string>
 				</dict>
